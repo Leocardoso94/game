@@ -1,0 +1,49 @@
+/*font-family: 'UnifrakturCook', cursive;
+font-family: 'Lobster', cursive;
+*/
+h1 {
+	font-size: 8em;
+}
+
+h3 {
+	font-size: 6em;
+}
+section{
+	height:100%;
+}
+h4{
+	font-size: 2em;
+}
+
+.title {
+	font-family: 'UnifrakturCook', cursive !important;
+}
+
+* {
+	background-color: #60DFE5;
+	font-family: 'Lobster', cursive;
+	color: #000;
+}
+
+p {
+	font-size: 4em;
+}
+
+hr {
+	border-top: 5px solid #fff;
+}
+
+section {
+	height: 100%;
+}
+
+i.text-center.fa.fa-lock {
+	font-size: 20em;
+	display: block;
+}
+
+#resposta{
+	height:2em;
+	font-size: 3em;
+	color: #000;
+}

@@ -1,0 +1,29 @@
+package br.com.game.mvc.logica;
+
+import java.sql.Connection;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import br.com.game.desafio.dao.TarefaDao;
+import br.com.game.desafio.modelo.Tarefa;
+
+public class CorrigeTarefa implements Logica {
+
+	@Override
+	public String executa(HttpServletRequest req, HttpServletResponse res) throws Exception {
+		Tarefa tarefa = new Tarefa();
+		Connection connection = (Connection) req.getAttribute("conexao");
+		TarefaDao dao = new TarefaDao(connection);
+		tarefa = dao.pesquisar((int) Long.parseLong(req.getParameter("id")));
+		String resposta = req.getParameter("resposta");		
+		if(resposta.equals("13")){
+			System.out.println("Resposta Correta!");
+			dao.proxima(tarefa.getId()+1);
+			return "mvc?logica=ListaTarefa&#perguntaNumero"+(tarefa.getId()+1);
+		}
+		System.out.println("Resposta Errada!");
+		return "mvc?logica=ListaTarefa&#perguntaNumero"+tarefa.getId();
+	}
+
+}
