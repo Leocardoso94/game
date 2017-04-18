@@ -9,7 +9,7 @@ public class ConnectionFactory {
 		try {
 			Class.forName("com.mysql.jdbc.Driver"); 
 			return DriverManager.getConnection(
-					"jdbc:mysql://localhost/fj21?useUnicode=true&characterEncoding=utf-8", "root", "");
+					"jdbc:mysql://localhost/fj21?useUnicode=true&characterEncoding=UTF-8", "root", "");
 		} catch (SQLException | ClassNotFoundException e) {
 			throw new RuntimeException(e);
 		}

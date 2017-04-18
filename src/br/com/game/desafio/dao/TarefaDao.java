@@ -49,6 +49,8 @@ public class TarefaDao {
 				t.setSituacao(rs.getBoolean("situacao"));
 				t.setDica(rs.getBoolean("dica"));
 				t.setPergunta(rs.getString("pergunta"));
+				t.setResposta(rs.getString("resposta"));
+				t.setResolvida(rs.getString("resolvida"));
 				tarefas.add(t);
 			}
 			rs.close();

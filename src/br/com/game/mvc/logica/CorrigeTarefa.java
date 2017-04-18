@@ -17,6 +17,7 @@ public class CorrigeTarefa implements Logica {
 		TarefaDao dao = new TarefaDao(connection);
 		tarefa = dao.pesquisar((int) Long.parseLong(req.getParameter("id")));
 		String resposta = req.getParameter("resposta");		
+		resposta = resposta.toLowerCase().trim();
 		if(resposta.equals(tarefa.getResposta())){
 			dao.proxima(tarefa.getId()+1);
 			return "Resposta Correta!";

@@ -1,11 +1,9 @@
 package br.com.game.desafio.modelo;
 
-import java.util.Calendar;
-
 public class Tarefa {
 	private Long id;
 	private boolean situacao;
-	private Calendar resolvida;
+	private String resolvida;
 	private boolean dica;
 	private String resposta;
 	private String pergunta;
@@ -26,11 +24,11 @@ public class Tarefa {
 		this.situacao = situacao;
 	}
 
-	public Calendar getResolvida() {
+	public String getResolvida() {
 		return resolvida;
 	}
 
-	public void setResolvida(Calendar resolvida) {
+	public void setResolvida(String resolvida) {
 		this.resolvida = resolvida;
 	}
 

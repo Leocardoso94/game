@@ -19,7 +19,6 @@ public class ActionServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String resposta = null;
-		//String id = request.getParameter("id");
 		CorrigeTarefa corrigeTarefa = new CorrigeTarefa();
 		try {
 			resposta = corrigeTarefa.executa(request, response);
