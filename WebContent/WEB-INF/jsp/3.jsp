@@ -5,9 +5,9 @@
 		você fica há um número bem próximo, consegue me falar qual é? <br>
 	</h4>
 	<input type="number" class="text-center form-control" name="resposta"
-		required id="resposta1" placeholder="Resposta"> <input
-		type="hidden" name="id" value="1" name="">
+		required id="resposta3" placeholder="Resposta"> <input
+		type="hidden" name="id" value="3" name="">
 </div>
-<button id="submit" name="" onClick="finalizaAgora(1)" value=""
+<button id="submit" name="" onClick="finalizaAgora(3)" value=""
 	class="btn btn-primary center-block">Enviar</button>
 <div id="Correcao"></div>

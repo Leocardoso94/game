@@ -1,12 +1,10 @@
 package br.com.game.desafio.dao;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 import br.com.game.desafio.modelo.Tarefa;
@@ -28,6 +26,8 @@ public class TarefaDao {
 				t.setId(rs.getLong("id"));
 				t.setSituacao(rs.getBoolean("situacao"));
 				t.setDica(rs.getBoolean("dica"));
+				t.setResposta(rs.getString("resposta"));
+				t.setPergunta(rs.getString("pergunta"));
 			}
 			rs.close();
 			stmt.close();
@@ -48,7 +48,7 @@ public class TarefaDao {
 				t.setId(rs.getLong("id"));
 				t.setSituacao(rs.getBoolean("situacao"));
 				t.setDica(rs.getBoolean("dica"));
-
+				t.setPergunta(rs.getString("pergunta"));
 				tarefas.add(t);
 			}
 			rs.close();

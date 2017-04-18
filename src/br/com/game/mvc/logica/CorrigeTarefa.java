@@ -17,13 +17,11 @@ public class CorrigeTarefa implements Logica {
 		TarefaDao dao = new TarefaDao(connection);
 		tarefa = dao.pesquisar((int) Long.parseLong(req.getParameter("id")));
 		String resposta = req.getParameter("resposta");		
-		if(resposta.equals("13")){
-			System.out.println("Resposta Correta!");
+		if(resposta.equals(tarefa.getResposta())){
 			dao.proxima(tarefa.getId()+1);
-			return "mvc?logica=ListaTarefa&#perguntaNumero"+(tarefa.getId()+1);
+			return "Resposta Correta!";
 		}
-		System.out.println("Resposta Errada!");
-		return "mvc?logica=ListaTarefa&#perguntaNumero"+tarefa.getId();
+		return "Tá errado!";
 	}
 
 }

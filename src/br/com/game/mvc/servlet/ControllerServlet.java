@@ -20,9 +20,7 @@ public class ControllerServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String parametro = request.getParameter("logica");
-		if (parametro.equals(null)) {
-			parametro = "ListaTarefa";
-		}
+
 		String nomeDaClasse = "br.com.game.mvc.logica." + parametro;
 		try {
 			@SuppressWarnings("rawtypes")

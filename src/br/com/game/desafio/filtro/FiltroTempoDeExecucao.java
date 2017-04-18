@@ -10,14 +10,11 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 @WebFilter("/*")
 public class FiltroTempoDeExecucao implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		HttpServletRequest req = (HttpServletRequest) request;
-		HttpServletResponse res = (HttpServletResponse) response;
 		long tempoInicial = System.currentTimeMillis();
 		chain.doFilter(request, response);
 		long tempoFinal = System.currentTimeMillis();
@@ -25,10 +22,6 @@ public class FiltroTempoDeExecucao implements Filter {
 		String parametro = ((HttpServletRequest) request).getParameter("logica");
 		System.out.println("Tempo da requisicao de " + uri + "?logica=" + parametro + " demorou (ms): "
 				+ (tempoFinal - tempoInicial));
-
-		//if (parametro == null) {
-		//	res.sendRedirect(uri + "mvc?logica=ListaTarefa");
-		//}
 	}
 	// métodos init e destroy omitidos
 
