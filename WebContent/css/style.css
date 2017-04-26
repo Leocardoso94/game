@@ -8,10 +8,12 @@ h1 {
 h3 {
 	font-size: 6em;
 }
-section{
-	height:100%;
+
+section {
+	height: 100%;
 }
-h4{
+
+h4 {
 	font-size: 2em;
 }
 
@@ -42,13 +44,51 @@ i.text-center.fa.fa-lock {
 	display: block;
 }
 
-#resposta{
-	height:2em;
+#resposta {
+	height: 2em;
 	font-size: 3em;
 	color: #000;
 }
 
-.pretoebranco{
+.pretoebranco {
 	background-color: #000;
 	color: #fff;
+}
+
+#perguntaNumero1 h5, #perguntaNumero5 h5, #perguntaNumero8 h5 {
+	font-style: italic;
+	font-weight: bold;
+}
+
+h5 {
+	font-size: 24px;
+}
+
+i.fa.fa-heart {
+	color: red;
+}
+
+em {
+	display: block;
+	font-family: Trebuchet MS;
+}
+
+.myButton {
+	background-color: #bb3dbb;
+	-moz-border-radius: 42px;
+	-webkit-border-radius: 42px;
+	border-radius: 42px;
+	border: 1px solid #ffffff;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Trebuchet MS;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 16px 31px;
+}
+
+input#resposta1 {
+	font-family: Trebuchet MS;
+	padding: 30px;
+	border-radius: 20px
 }
