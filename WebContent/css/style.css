@@ -14,7 +14,7 @@ section {
 }
 
 h4 {
-	font-size: 2em;
+	font-size: 4em;
 }
 
 .title {
@@ -70,6 +70,7 @@ i.fa.fa-heart {
 
 em {
 	display: block;
+	font-size: 3em;
 	font-family: Trebuchet MS;
 }
 
@@ -82,15 +83,15 @@ em {
 	cursor: pointer;
 	color: #ffffff;
 	/* font-family: Trebuchet MS; */
-	font-size: 16px;
+	font-size: 3em;
 	font-weight: bold;
-	padding: 16px 31px;
+	padding: 1em 2em;
 }
 
 .input {
 	font-family: 'UnifrakturCook', cursive !important;
-	padding: 30px;
+	padding: 1em;
 	color: #000;
-	font-size: 50px;
+	font-size: 4em;
 	border-radius: 20px;
 }
