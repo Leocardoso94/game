@@ -74,21 +74,23 @@ em {
 }
 
 .myButton {
-	background-color: #bb3dbb;
+	background-color: #000000;
 	-moz-border-radius: 42px;
 	-webkit-border-radius: 42px;
 	border-radius: 42px;
-	border: 1px solid #ffffff;
+	border: 1px solid #000;
 	cursor: pointer;
 	color: #ffffff;
-	font-family: Trebuchet MS;
+	/* font-family: Trebuchet MS; */
 	font-size: 16px;
 	font-weight: bold;
 	padding: 16px 31px;
 }
 
-input#resposta1 {
-	font-family: Trebuchet MS;
+.input {
+	font-family: 'UnifrakturCook', cursive !important;
 	padding: 30px;
-	border-radius: 20px
+	color: #000;
+	font-size: 50px;
+	border-radius: 20px;
 }

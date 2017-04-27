@@ -4,7 +4,6 @@ public class Tarefa {
 	private Long id;
 	private boolean situacao;
 	private String resolvida;
-	private boolean dica;
 	private String resposta;
 	private String pergunta;
 
@@ -30,14 +29,6 @@ public class Tarefa {
 
 	public void setResolvida(String resolvida) {
 		this.resolvida = resolvida;
-	}
-
-	public boolean isDica() {
-		return dica;
-	}
-
-	public void setDica(boolean dica) {
-		this.dica = dica;
 	}
 
 	public String getResposta() {

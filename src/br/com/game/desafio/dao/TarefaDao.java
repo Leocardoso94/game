@@ -25,7 +25,6 @@ public class TarefaDao {
 			while (rs.next()) {
 				t.setId(rs.getLong("id"));
 				t.setSituacao(rs.getBoolean("situacao"));
-				t.setDica(rs.getBoolean("dica"));
 				t.setResposta(rs.getString("resposta"));
 				t.setPergunta(rs.getString("pergunta"));
 			}
@@ -47,7 +46,6 @@ public class TarefaDao {
 				Tarefa t = new Tarefa();
 				t.setId(rs.getLong("id"));
 				t.setSituacao(rs.getBoolean("situacao"));
-				t.setDica(rs.getBoolean("dica"));
 				t.setPergunta(rs.getString("pergunta"));
 				t.setResposta(rs.getString("resposta"));
 				t.setResolvida(rs.getString("resolvida"));
@@ -63,8 +61,12 @@ public class TarefaDao {
 	}
 
 	public void proxima(Long id) {
-		String sql = "update desafios set situacao=? where id=?";
-
+		String sql;
+		if (id == 11) {
+			sql = "update desafios set situacao=?, resolvida = NOW() where id=?";
+		} else {
+			sql = "update desafios set situacao=? where id=?";
+		}
 		try {
 			PreparedStatement stmt = connection.prepareStatement(sql);
 			stmt.setBoolean(1, true);
